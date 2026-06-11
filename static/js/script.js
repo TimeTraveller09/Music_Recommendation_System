@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     songInput.addEventListener('input', function () {
         const query = this.value.trim();
         btnSubmit.disabled = true;
-        
+
         clearTimeout(debounceTimer);
         if (!query) {
             closeDropdown();
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showDropdown(items) {
         autocompleteList.innerHTML = '';
-        
+
         if (items.length === 0) {
             autocompleteList.innerHTML = '<div class="no-results">No matches found. Try typing another song title.</div>';
             autocompleteList.classList.add('show');
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnSubmit.disabled = true;
 
         const url = `/api/recommend?song_name=${encodeURIComponent(selectedSong.track_name)}&artist=${encodeURIComponent(selectedSong.artists)}`;
-        
+
         fetch(url)
             .then(response => {
                 if (!response.ok) {

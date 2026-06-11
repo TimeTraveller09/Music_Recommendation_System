@@ -808,13 +808,11 @@ footer {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: repeating-radial-gradient(
-        circle,
-        #272b38,
-        #272b38 3px,
-        #121620 5px,
-        #121620 7px
-    );
+    background: repeating-radial-gradient(circle,
+            #272b38,
+            #272b38 3px,
+            #121620 5px,
+            #121620 7px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     animation: spin-slow 12s linear infinite;
     animation-play-state: paused;
@@ -855,6 +853,7 @@ footer {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
